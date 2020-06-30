@@ -1,3 +1,6 @@
+# List of activities (unique to each user)
+tasks.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

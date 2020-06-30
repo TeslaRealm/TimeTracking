@@ -39,7 +39,11 @@ class Tasker():
             return
 
         with open(self.taskFilePath, 'r') as csvfile:
-            csvreader = csv.reader(csvfile)
+            csvreader = csv.DictReader(csvfile, delimiter = ' ')
+
+            for row in csvreader:
+                print(row)
+            return
 
             # Validate headers
             headers = next(csvreader)

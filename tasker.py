@@ -15,10 +15,13 @@ class CSVBadHeadersException(CSVBaseException):
         self.message = message
 
     def __repr__(self):
-        return self.message
+        return f'CSVBadHeadersException({self.message!r})'
 
     def __str__(self):
         return self.message
+
+    def __eq__(self, other):
+        return self.message == other.message
 
 class Tasker():
     def __init__(self, taskFilePath = Path('tasks.txt'), skip_CSV_Validation = False):
